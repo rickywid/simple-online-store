@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Poiret+One&family=Titan+One&display=swap');
+
+body {
+    font-family: 'Poiret One', cursive;
+
+}
+
+h1, h2 {
+    font-family: 'Chango', cursive !important;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Chango', cursive !important;
+}
