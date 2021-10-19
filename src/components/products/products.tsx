@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom';
 import {
     Box,
-    SimpleGrid,
-    Image,
-    Heading,
     Container,
-    Center
 } from '@chakra-ui/react';
 import ProductView from './productView';
 import { products, products2, IProduct } from '../../data';

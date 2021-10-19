@@ -19,7 +19,7 @@ const routes = (
         <Route path="/product/:product_id">
             <Product />
         </Route>
-        <Route path="/cart">W
+        <Route path="/cart">
             <Cart />
         </Route>
     </Switch>

@@ -1,5 +1,5 @@
 import {
-    Box, Button, Container, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure
+    Box, Button, Container, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Table, Tbody, Td, Th, Thead, Tr, useDisclosure
 } from '@chakra-ui/react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { remove, selectCart, clear } from '../../components/cart/cartSlice';
@@ -48,23 +48,89 @@ function Cart() {
 
     return (
         <Container
+            width={{
+                base: "auto"
+            }}
             maxW="container.xl"
             bg="#FFFFFF"
-            borderRight="15px solid #ffa1b2"
-            borderLeft="15px solid #ffa1b2"
-            p="60px 40px 40px 60px"
+            borderRight={{
+                base: "none",
+                lg: "15px solid #ffa1b2"
+            }}
+            borderLeft={{
+                base: "none",
+                lg: "15px solid #ffa1b2"
+            }}
+            p={{
+                base: "60px 10px 40px 10px",
+                md: "60px 40px 40px 60px"
+            }}
+            minHeight="calc(100vh - 75px)"
+            margin={{
+                base: "0 15px",
+                lg: "auto"
+            }}
         >
-            {cart.map(item => {
-                return (
-                    <CartItem
-                        item={item}
-                        removeItem={removeItem}
-                    />
-                )
-            })}
-            <p>total: {totalCost()}</p>
-            <Button onClick={onOpen} isDisabled={cart.length ? false : true}>Place Order</Button>
-            <Button onClick={clearCart}>Cancel Order</Button>
+            <Table
+                variant="simple"
+                mb="10"
+            >
+                <Thead>
+                    <Tr>
+                        <Th>Item</Th>
+                        <Th isNumeric>Price</Th>
+                    </Tr>
+                </Thead>
+                <Tbody>
+                    {cart.map(item => {
+                        return (
+                            <CartItem
+                                item={item}
+                                removeItem={removeItem}
+                            />
+                        )
+                    })}
+                    <Tr>
+                        <Td fontWeight="bold">
+                            Total
+                        </Td>
+                        <Td isNumeric fontWeight="bold">
+                            $ {totalCost()}
+                        </Td>
+                    </Tr>
+                </Tbody>
+            </Table>
+            <Box 
+                textAlign="right"
+                display={{
+                    base: "flex",
+                    sm: "inherit"
+                }}
+                justifyContent="space-between"
+            >
+                <Button
+                    colorScheme="teal"
+                    mr="4"
+                    onClick={onOpen}
+                    isDisabled={cart.length ? false : true}
+                    width={{
+                        base: "48%",
+                        sm: "auto"
+                    }}
+                >
+                    Place Order
+                </Button>
+                <Button
+                    onClick={clearCart}
+                    colorScheme="red"
+                    width={{
+                        base: "48%",
+                        sm: "auto"
+                    }}
+                >
+                    Cancel Order
+                </Button>
+            </Box>
 
             <Modal onClose={onClose} isOpen={isOpen} isCentered>
                 <ModalOverlay />

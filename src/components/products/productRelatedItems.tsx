@@ -1,5 +1,5 @@
 import { Heading } from '@chakra-ui/react';
-import { products, IProduct } from '../../data';
+import { products } from '../../data';
 import ProductView from './productView';
 
 const ProductRelatedItems = () => {

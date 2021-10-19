@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Button, Heading, Image, Flex, Text, UnorderedList, ListItem } from '@chakra-ui/react';
+import { Box, Button, Heading, Image } from '@chakra-ui/react';
 import Medal from "../medal.png";
-import Star from "../star.png";
 import Testimonials from './testimonials';
 
 function Landing() {
