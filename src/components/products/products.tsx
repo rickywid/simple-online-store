@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom';
 import {
     Box,
     Container,
 } from '@chakra-ui/react';
 import ProductView from './productView';
-import { products, products2, IProduct } from '../../data';
+import { products, products2 } from '../../data';
 
 function Products() {
     return (

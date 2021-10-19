@@ -9,6 +9,7 @@ import { ChakraProvider } from "@chakra-ui/react"
 import { BrowserRouter as Router } from "react-router-dom";
 import theme from './theme/theme';
 import './global.css';
+import 'animate.css';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -44,7 +45,8 @@ serviceWorker.unregister();
 - User can click a See More Products button on the Shopping Cart Page to return to the Products Page. If the order hasn't been placed yet this will not clear the products that have already been added to the Products Page.
 
 
-Show confirmation message when item is added to cart
-Get sandwich images
-style all pages
+- Show confirmation message when item is added to cart
+- Show confirmation message when item is added to cart (mobile view)
+- Get sandwich images
+style navbar
 */

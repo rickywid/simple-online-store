@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAppSelector } from './app/hooks';
-import { Image, Box, Container, Flex } from '@chakra-ui/react';
+import { Box, Container, Flex, Heading } from '@chakra-ui/react';
 import { BsCart3 } from 'react-icons/bs';
-// import Logo from './sandwich.png';
 import routes from './routes';
 import { selectCart } from './components/cart/cartSlice';
 
@@ -21,13 +20,7 @@ function App() {
           <Flex justify="space-between">
             <Box>
               <Link to={`/`}>
-                <Image
-                  // src={Logo}
-                  display="inline-block"
-                  pr={4}
-                  height="35px"
-                />
-                Simple online store
+                <Heading as="h2" size="sm">Simple Online Store</Heading>
               </Link>
             </Box>
             <Link to={`/cart`}>

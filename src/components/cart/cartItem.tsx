@@ -15,6 +15,7 @@ import {
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { selectCart, update } from './cartSlice';
 import { products } from '../../data';
+import { Link } from 'react-router-dom';
 
 interface ICartItem {
     item: any;
@@ -26,7 +27,7 @@ function CartItem({ item, removeItem }: ICartItem) {
     const [qtyInput, setQtyInput] = useState<number>();
     const cart = useAppSelector(selectCart);
     const dispatch = useAppDispatch();
-
+    
     const updateQty = (id: number, qty: number) => {
 
         cart.map(item => {
@@ -107,6 +108,7 @@ function CartItem({ item, removeItem }: ICartItem) {
                                     <NumberDecrementStepper />
                                 </NumberInputStepper>
                             </NumberInput>
+                            <Link to={`/product/${item.id}`}><small>View </small></Link>
                             <small onClick={() => removeItem(item.id)}>remove</small>
                             {!inStock && <p>Oops! We are out of stock.</p>}
                         </Box>

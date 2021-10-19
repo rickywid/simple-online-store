@@ -12,11 +12,17 @@ function Landing() {
             >
                 <Box height="100px" backgroundImage="/assets/plaid.jpg"></Box>
                 <Box
-                    height="calc(100vh - 275px)"
+                    minHeight={{
+                        base: "calc(100vh - 275px)"
+                    }}
                     display="flex"
                     justifyContent="space-around"
+                    padding={{
+                        base: "90px 0",
+                        sm: "0"
+                    }}
                 >
-                    <Box 
+                    <Box
                         margin="auto"
                         display={{
                             base: "none",
@@ -60,19 +66,40 @@ function Landing() {
                             #1 Voted!
                         </Heading>
                         <Box mt="10" mb="10">
-                            <Image
-                                src={Medal}
-                                height="150px"
-                                alt="medal"
-                                position="absolute"
-                                left="-33px"
-                                top="200px"
-                            />
-                            <Image src="/assets/sandwich (35).png" alt="burger" />
+                            <Box>
+                                <Image
+                                    src={Medal}
+                                    height={{
+                                        base: "110px",
+                                        sm: "150px"
+                                    }}
+                                    alt="medal"
+                                    position="absolute"
+                                    left={{
+                                        base: "46px",
+                                        sm: "-33px"
+                                    }}
+                                    top={{
+                                        base: "143px",
+                                        sm: "200px"
+                                    }}
+                                />
+                                <Image
+                                    src="/assets/sandwich (35).png"
+                                    alt="burger"
+                                    width={{
+                                        base: "75%",
+                                        sm: "100%"
+                                    }}
+                                    margin={{
+                                        base: "auto"
+                                    }}
+                                />
+                            </Box>
                         </Box>
                         <Heading textAlign="center">Porilainen Sandwich</Heading>
                     </Box>
-                    <Box 
+                    <Box
                         margin="auto"
                         display={{
                             base: "none",
