@@ -7,8 +7,8 @@ import {
     Container,
     Center
 } from '@chakra-ui/react';
-import ProductView from './products/productView';
-import { products, products2, IProduct } from '../data';
+import ProductView from './productView';
+import { products, products2, IProduct } from '../../data';
 
 function Products() {
     return (

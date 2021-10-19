@@ -1,5 +1,5 @@
 import {
-    Box, Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure
+    Box, Button, Container, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure
 } from '@chakra-ui/react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { remove, selectCart, clear } from '../../components/cart/cartSlice';
@@ -47,7 +47,13 @@ function Cart() {
     }
 
     return (
-        <Box>
+        <Container
+            maxW="container.xl"
+            bg="#FFFFFF"
+            borderRight="15px solid #ffa1b2"
+            borderLeft="15px solid #ffa1b2"
+            p="60px 40px 40px 60px"
+        >
             {cart.map(item => {
                 return (
                     <CartItem
@@ -74,7 +80,7 @@ function Cart() {
                     </ModalFooter>
                 </ModalContent>
             </Modal>
-        </Box>
+        </Container>
     );
 }
 

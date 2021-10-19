@@ -5,8 +5,8 @@ import {
 } from "react-router-dom";
 import Landing from "./components/landing";
 import Cart from "./components/cart/cart";
-import Product from "./components/product";
-import Products from "./components/products";
+import Product from "./components/products/product";
+import Products from "./components/products/products";
 
 const routes = (
     <Switch>
