@@ -15,13 +15,13 @@ function Products() {
             borderLeft="15px solid #ffa1b2"
             p="60px 40px 40px 60px"
         >
-            <Box>
+            <Box mb="20">
                 <ProductView
                     products={products}
                     header="Sandwiches"
                 />
             </Box>
-            <Box>
+            <Box mb="20">
                 <ProductView
                     products={products2}
                     header="Burgers"

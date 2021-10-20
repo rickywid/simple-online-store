@@ -65,7 +65,7 @@ const ProductItemDetail = ({ productId }: IProps) => {
     }
 
     const updateQty = (id: number, qty: number) => {
-        if (remainingQty() < 1 ) {
+        if (remainingQty() < 1) {
             setInStock(false);
             setShowError(true);
             setQtyInput(qty);
