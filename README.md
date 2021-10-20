@@ -17,27 +17,6 @@ Install packages:
 
 `$ cd simple-online-store && npm install`
 
-Edit the routes file to:
-
-```
-const routes = (
-    <Switch>
-        <Route exact path="/">
-            <Landing />
-        </Route>
-        <Route path="/products">
-            <Products />
-        </Route>
-        <Route path="/product/:product_id">
-            <Product />
-        </Route>
-        <Route path="/cart">
-            <Cart />
-        </Route>
-    </Switch>
-)
-```
-
 Run application:
 
 `$ npm start`
