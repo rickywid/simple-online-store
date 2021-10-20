@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     NumberInput,
     NumberInputField,
@@ -24,10 +24,22 @@ interface ICartItem {
 
 function CartItem({ item, removeItem }: ICartItem) {
     const [inStock, setInStock] = useState<boolean>(true);
-    const [qtyInput, setQtyInput] = useState<number>();
     const cart = useAppSelector(selectCart);
     const dispatch = useAppDispatch();
-    
+
+    useEffect(() => {
+        checkItemStockQty();
+    });
+
+    const cartItem = () => {
+        return cart.filter(i => i.id === item.id);
+    }
+
+    const checkItemStockQty = () => {
+        products[item.id - 1].quantity - cartItem()[0].orderQty === 0 && setInStock(false);
+
+    }
+
     const updateQty = (id: number, qty: number) => {
 
         cart.map(item => {
@@ -37,13 +49,11 @@ function CartItem({ item, removeItem }: ICartItem) {
 
                 if (remainingQty === 0) {
                     setInStock(false);
-                    setQtyInput(qty);
                     return null;
                 }
             }
 
             setInStock(true)
-            setQtyInput(10);
 
             return item;
         });
@@ -95,12 +105,10 @@ function CartItem({ item, removeItem }: ICartItem) {
                             <NumberInput
                                 defaultValue={item.orderQty}
                                 min={1}
-                                max={inStock ? 100 : qtyInput}
-                                size="xs"
+                                max={inStock ? 100 : cartItem()[0].orderQty}
+                                size="md"
                                 onChange={(qty) => updateQty(item.id, parseInt(qty))}
-                                focusBorderColor={inStock ? "initial" : "1px solid red"}
-                                outline={inStock ? "initial" : "1px solid red"}
-                                width="65px"
+                                width="75px"
                             >
                                 <NumberInputField />
                                 <NumberInputStepper>
@@ -108,9 +116,11 @@ function CartItem({ item, removeItem }: ICartItem) {
                                     <NumberDecrementStepper />
                                 </NumberInputStepper>
                             </NumberInput>
-                            <Link to={`/product/${item.id}`}><small>View </small></Link>
-                            <small onClick={() => removeItem(item.id)}>remove</small>
-                            {!inStock && <p>Oops! We are out of stock.</p>}
+                            <Flex>
+                                <Link to={`/product/${item.id}`}><small>View</small></Link>
+                                <Text>&nbsp;/&nbsp;</Text>
+                                <small onClick={() => removeItem(item.id)}>Remove</small>
+                            </Flex>
                         </Box>
                     </Box>
                 </Flex>
