@@ -1,6 +1,7 @@
 import {
     Box, Button, Container, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Table, Tbody, Td, Th, Thead, Tr, useDisclosure
 } from '@chakra-ui/react';
+import { useHistory } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { remove, selectCart, clear } from '../../components/cart/cartSlice';
 import CartItem from './cartItem';
@@ -10,7 +11,7 @@ function Cart() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const cart = useAppSelector(selectCart);
     const dispatch = useAppDispatch();
-
+    const history = useHistory();
     const totalCost = () => {
         let total = 0;
 
@@ -100,7 +101,7 @@ function Cart() {
                     </Tr>
                 </Tbody>
             </Table>
-            <Box 
+            <Box
                 textAlign="right"
                 display={{
                     base: "flex",
@@ -132,7 +133,14 @@ function Cart() {
                 </Button>
             </Box>
 
-            <Modal onClose={onClose} isOpen={isOpen} isCentered>
+            <Modal onClose={() => {
+                onClose();
+                clearCart();
+                history.push('/');
+            }}
+                isOpen={isOpen}
+                isCentered
+            >
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Your order has been placed.</ModalHeader>
@@ -142,7 +150,11 @@ function Cart() {
                         {generateConfirmationNo()}
                     </ModalBody>
                     <ModalFooter>
-                        <Button onClick={onClose}>Close</Button>
+                        <Button onClick={() => {
+                            clearCart();
+                            onClose();
+                            history.push('/');
+                        }}>Close</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
