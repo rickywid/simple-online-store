@@ -18,7 +18,7 @@ export const products: IProduct[] = [
         "price": "122.00",
         "quantity": 15,
         "addons": "spinach",
-        "image": "/assets/sandwich (1).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (1).png`
     },
     {
         "id": 2,
@@ -28,7 +28,7 @@ export const products: IProduct[] = [
         "price": "289.00",
         "quantity": 20,
         "addons": "mushrooms",
-        "image": "/assets/sandwich (2).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (2).png`
     },
     {
         "id": 3,
@@ -38,7 +38,7 @@ export const products: IProduct[] = [
         "price": "360.00",
         "quantity": 18,
         "addons": "onions",
-        "image": "/assets/sandwich (3).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (3).png`
     },
     {
         "id": 4,
@@ -48,7 +48,7 @@ export const products: IProduct[] = [
         "price": "876.00",
         "quantity": 13,
         "addons": "ham",
-        "image": "/assets/sandwich (4).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (4).png`
     },
     {
         "id": 5,
@@ -58,7 +58,7 @@ export const products: IProduct[] = [
         "price": "203.00",
         "quantity": 11,
         "addons": "feta",
-        "image": "/assets/sandwich (5).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (5).png`
     },
     {
         "id": 6,
@@ -68,7 +68,7 @@ export const products: IProduct[] = [
         "price": "248.00",
         "quantity": 5,
         "addons": "pepperoni",
-        "image": "/assets/sandwich (6).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (6).png`
     },
     {
         "id": 7,
@@ -78,7 +78,7 @@ export const products: IProduct[] = [
         "price": "849.00",
         "quantity": 16,
         "addons": "spinach",
-        "image": "/assets/sandwich (7).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (7).png`
     },
     {
         "id": 8,
@@ -88,7 +88,7 @@ export const products: IProduct[] = [
         "price": "495.00",
         "quantity": 13,
         "addons": "breakfast bacon",
-        "image": "/assets/sandwich (8).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (8).png`
     },
     {
         "id": 9,
@@ -98,7 +98,7 @@ export const products: IProduct[] = [
         "price": "323.00",
         "quantity": 6,
         "addons": "mushrooms",
-        "image": "/assets/sandwich (9).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (9).png`
     },
     {
         "id": 10,
@@ -108,7 +108,7 @@ export const products: IProduct[] = [
         "price": "389.00",
         "quantity": 6,
         "addons": "hot sauce",
-        "image": "/assets/sandwich (10).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (10).png`
     },
     {
         "id": 11,
@@ -118,7 +118,7 @@ export const products: IProduct[] = [
         "price": "920.00",
         "quantity": 18,
         "addons": "sun-dried tomato",
-        "image": "/assets/sandwich (11).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (11).png`
     },
     {
         "id": 12,
@@ -128,7 +128,7 @@ export const products: IProduct[] = [
         "price": "751.00",
         "quantity": 5,
         "addons": "garlic",
-        "image": "/assets/sandwich (12).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (12).png`
     },
     {
         "id": 13,
@@ -138,7 +138,7 @@ export const products: IProduct[] = [
         "price": "592.00",
         "quantity": 17,
         "addons": "breakfast bacon",
-        "image": "/assets/sandwich (13).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (13).png`
     },
     {
         "id": 14,
@@ -148,7 +148,7 @@ export const products: IProduct[] = [
         "price": "158.00",
         "quantity": 2,
         "addons": "breakfast bacon",
-        "image": "/assets/sandwich (14).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (14).png`
     },
     {
         "id": 15,
@@ -158,7 +158,7 @@ export const products: IProduct[] = [
         "price": "26.00",
         "quantity": 8,
         "addons": "ham",
-        "image": "/assets/sandwich (15).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (15).png`
     },
     {
         "id": 16,
@@ -168,7 +168,7 @@ export const products: IProduct[] = [
         "price": "522.00",
         "quantity": 4,
         "addons": "feta",
-        "image": "/assets/sandwich (16).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (16).png`
     },
     {
         "id": 17,
@@ -178,7 +178,7 @@ export const products: IProduct[] = [
         "price": "263.00",
         "quantity": 3,
         "addons": "tomatoes",
-        "image": "/assets/sandwich (17).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (17).png`
     },
     {
         "id": 18,
@@ -188,7 +188,7 @@ export const products: IProduct[] = [
         "price": "849.00",
         "quantity": 11,
         "addons": "olives",
-        "image": "/assets/sandwich (18).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (18).png`
     },
     {
         "id": 19,
@@ -198,7 +198,7 @@ export const products: IProduct[] = [
         "price": "555.00",
         "quantity": 6,
         "addons": "pineapple",
-        "image": "/assets/sandwich (19).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (19).png`
     },
     {
         "id": 20,
@@ -208,7 +208,7 @@ export const products: IProduct[] = [
         "price": "51.00",
         "quantity": 20,
         "addons": "anchovies",
-        "image": "/assets/sandwich (20).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (20).png`
     },
     {
         "id": 21,
@@ -218,7 +218,7 @@ export const products: IProduct[] = [
         "price": "819.00",
         "quantity": 9,
         "addons": "meatballs",
-        "image": "/assets/sandwich (21).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (21).png`
     },
     {
         "id": 22,
@@ -228,7 +228,7 @@ export const products: IProduct[] = [
         "price": "704.00",
         "quantity": 2,
         "addons": "hot sauce",
-        "image": "/assets/sandwich (22).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (22).png`
     },
     {
         "id": 23,
@@ -238,7 +238,7 @@ export const products: IProduct[] = [
         "price": "379.00",
         "quantity": 13,
         "addons": "breakfast bacon",
-        "image": "/assets/sandwich (23).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (23).png`
     },
     {
         "id": 24,
@@ -248,7 +248,7 @@ export const products: IProduct[] = [
         "price": "296.00",
         "quantity": 6,
         "addons": "artichoke",
-        "image": "/assets/sandwich (24).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (24).png`
     },
     {
         "id": 25,
@@ -258,7 +258,7 @@ export const products: IProduct[] = [
         "price": "156.00",
         "quantity": 10,
         "addons": "anchovies",
-        "image": "/assets/sandwich (25).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (25).png`
     },
     {
         "id": 26,
@@ -268,7 +268,7 @@ export const products: IProduct[] = [
         "price": "243.00",
         "quantity": 15,
         "addons": "olives",
-        "image": "/assets/sandwich (26).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (26).png`
     },
     {
         "id": 27,
@@ -278,7 +278,7 @@ export const products: IProduct[] = [
         "price": "628.00",
         "quantity": 6,
         "addons": "Canadian bacon",
-        "image": "/assets/sandwich (27).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (27).png`
     },
     {
         "id": 28,
@@ -288,7 +288,7 @@ export const products: IProduct[] = [
         "price": "362.00",
         "quantity": 11,
         "addons": "grilled onions",
-        "image": "/assets/sandwich (28).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (28).png`
     },
     {
         "id": 29,
@@ -298,7 +298,7 @@ export const products: IProduct[] = [
         "price": "341.00",
         "quantity": 3,
         "addons": "green peppers",
-        "image": "/assets/sandwich (29).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (29).png`
     },
     {
         "id": 30,
@@ -308,7 +308,7 @@ export const products: IProduct[] = [
         "price": "754.00",
         "quantity": 20,
         "addons": "Canadian bacon",
-        "image": "/assets/sandwich (30).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (30).png`
     },
     {
         "id": 31,
@@ -318,7 +318,7 @@ export const products: IProduct[] = [
         "price": "191.00",
         "quantity": 6,
         "addons": "garlic",
-        "image": "/assets/sandwich (31).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (31).png`
     },
     {
         "id": 32,
@@ -328,7 +328,7 @@ export const products: IProduct[] = [
         "price": "417.00",
         "quantity": 19,
         "addons": "chicken",
-        "image": "/assets/sandwich (32).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (32).png`
     },
     {
         "id": 33,
@@ -338,7 +338,7 @@ export const products: IProduct[] = [
         "price": "736.00",
         "quantity": 4,
         "addons": "meatballs",
-        "image": "/assets/sandwich (33).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (33).png`
     },
     {
         "id": 34,
@@ -348,7 +348,7 @@ export const products: IProduct[] = [
         "price": "582.00",
         "quantity": 19,
         "addons": "anchovies",
-        "image": "/assets/sandwich (34).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (34).png`
     },
     {
         "id": 35,
@@ -358,7 +358,7 @@ export const products: IProduct[] = [
         "price": "239.00",
         "quantity": 14,
         "addons": "onions",
-        "image": "/assets/sandwich (35).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (35).png`
     },
     {
         "id": 36,
@@ -368,7 +368,7 @@ export const products: IProduct[] = [
         "price": "891.00",
         "quantity": 9,
         "addons": "feta",
-        "image": "/assets/sandwich (36).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (36).png`
     }
 ]
 
@@ -381,7 +381,7 @@ export const products2: IProduct[] = [
         "price": "175.00",
         "quantity": 5,
         "addons": "grilled onions",
-        "image": "/assets/sandwich (1).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (1).png`
     },
     {
         "id": 2,
@@ -391,7 +391,7 @@ export const products2: IProduct[] = [
         "price": "47.00",
         "quantity": 0,
         "addons": "ground beef",
-        "image": "/assets/sandwich (2).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (2).png`
     },
     {
         "id": 3,
@@ -401,7 +401,7 @@ export const products2: IProduct[] = [
         "price": "879.00",
         "quantity": 6,
         "addons": "garlic",
-        "image": "/assets/sandwich (3).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (3).png`
     },
     {
         "id": 4,
@@ -411,7 +411,7 @@ export const products2: IProduct[] = [
         "price": "535.00",
         "quantity": 16,
         "addons": "pepperoni",
-        "image": "/assets/sandwich (4).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (4).png`
     },
     {
         "id": 5,
@@ -421,7 +421,7 @@ export const products2: IProduct[] = [
         "price": "584.00",
         "quantity": 18,
         "addons": "tomatoes",
-        "image": "/assets/sandwich (5).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (5).png`
     },
     {
         "id": 6,
@@ -431,7 +431,7 @@ export const products2: IProduct[] = [
         "price": "73.00",
         "quantity": 13,
         "addons": "anchovies",
-        "image": "/assets/sandwich (6).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (6).png`
     },
     {
         "id": 7,
@@ -441,7 +441,7 @@ export const products2: IProduct[] = [
         "price": "561.00",
         "quantity": 1,
         "addons": "bacon",
-        "image": "/assets/sandwich (7).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (7).png`
     },
     {
         "id": 8,
@@ -451,7 +451,7 @@ export const products2: IProduct[] = [
         "price": "902.00",
         "quantity": 14,
         "addons": "spinach",
-        "image": "/assets/sandwich (8).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (8).png`
     },
     {
         "id": 9,
@@ -461,6 +461,6 @@ export const products2: IProduct[] = [
         "price": "665.00",
         "quantity": 17,
         "addons": "sausage",
-        "image": "/assets/sandwich (9).png"
+        "image": `${process.env.PUBLIC_URL}/assets/sandwich (9).png`
     }
 ]

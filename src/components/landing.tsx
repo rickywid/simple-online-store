@@ -10,7 +10,7 @@ function Landing() {
             <Box
                 bg="radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(210,163,183,1) 90%)"
             >
-                <Box height="100px" backgroundImage="/assets/plaid.jpg"></Box>
+                <Box height="100px" backgroundImage={`${process.env.PUBLIC_URL}/assets/plaid.jpg`}></Box>
                 <Box
                     minHeight={{
                         base: "calc(100vh - 275px)"
@@ -85,7 +85,7 @@ function Landing() {
                                     }}
                                 />
                                 <Image
-                                    src="/assets/sandwich (35).png"
+                                    src={`${process.env.PUBLIC_URL}/assets/sandwich (35).png`}
                                     alt="burger"
                                     width={{
                                         base: "75%",
@@ -131,7 +131,7 @@ function Landing() {
                 </Box>
                 <Box
                     padding="30px 0"
-                    backgroundImage="/assets/plaid.jpg"
+                    backgroundImage={`${process.env.PUBLIC_URL}/assets/plaid.jpg`}
                     textAlign="center"
                 >
                     <Link style={{ marginRight: "10px" }} to={`/product/35`}>
