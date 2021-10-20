@@ -65,7 +65,7 @@ const ProductItemDetail = ({ productId }: IProps) => {
     }
 
     const updateQty = (id: number, qty: number) => {
-        if (remainingQty() < 1) {
+        if (remainingQty() < 1 ) {
             setInStock(false);
             setShowError(true);
             setQtyInput(qty);
@@ -111,7 +111,7 @@ const ProductItemDetail = ({ productId }: IProps) => {
                     </Text>
                     <Heading as="h3" size="lg" mb={5}>${price}</Heading>
                     <Text mb="3">{description}</Text>
-                    <Text mb="3" fontWeight="bold">QTY: {itemInCart().length > 0 ? remainingQty() : quantity}</Text>
+                    <Text mb="3" fontWeight="bold">QTY: {quantity}</Text>
                     <Text fontSize="smaller">Product no. {id}</Text>
                 </Box>
                 <Box position="relative">
@@ -171,6 +171,7 @@ const ProductItemDetail = ({ productId }: IProps) => {
                         outline={inStock ? "initial" : "1px solid red"}
                         mb="5"
                         mt="5"
+                        isDisabled={itemInCart().length > 0}
                     >
                         <NumberInputField />
                         <NumberInputStepper>
