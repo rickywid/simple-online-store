@@ -13,13 +13,13 @@ const routes = (
         <Route exact path="/">
             <Landing />
         </Route>
-        <Route path="/products">
+        <Route exact path="/products">
             <Products />
         </Route>
-        <Route path="/product/:product_id">
+        <Route exact path="/product/:product_id">
             <Product />
         </Route>
-        <Route path="/cart">
+        <Route exact path="/cart">
             <Cart />
         </Route>
     </Switch>
