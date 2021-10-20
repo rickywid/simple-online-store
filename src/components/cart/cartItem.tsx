@@ -63,7 +63,9 @@ function CartItem({ item, removeItem }: ICartItem) {
 
     return (
         <Tr key={item.id}>
-            <Td>
+            <Td
+                p="0"
+            >
                 <Flex>
                     <Box
                         display={{
@@ -102,24 +104,33 @@ function CartItem({ item, removeItem }: ICartItem) {
                                 mb="5"
                             >{item.name}</Text>
                             <Text mb="5">{item.description}</Text>
-                            <NumberInput
-                                defaultValue={item.orderQty}
-                                min={1}
-                                max={inStock ? 100 : cartItem()[0].orderQty}
-                                size="md"
-                                onChange={(qty) => updateQty(item.id, parseInt(qty))}
-                                width="75px"
+                            <Flex
+                                alignItems="center"
                             >
-                                <NumberInputField />
-                                <NumberInputStepper>
-                                    <NumberIncrementStepper />
-                                    <NumberDecrementStepper />
-                                </NumberInputStepper>
-                            </NumberInput>
-                            <Flex>
-                                <Link to={`/product/${item.id}`}><small>View</small></Link>
-                                <Text>&nbsp;/&nbsp;</Text>
-                                <small onClick={() => removeItem(item.id)}>Remove</small>
+                                <Text 
+                                    fontWeight="bold"
+                                    mr="3"
+                                >QTY</Text>
+                                <NumberInput
+                                    defaultValue={item.orderQty}
+                                    min={1}
+                                    max={inStock ? 100 : cartItem()[0].orderQty}
+                                    size="md"
+                                    onChange={(qty) => updateQty(item.id, parseInt(qty))}
+                                    width="75px"
+                                    mr="5"
+                                >
+                                    <NumberInputField />
+                                    <NumberInputStepper>
+                                        <NumberIncrementStepper />
+                                        <NumberDecrementStepper />
+                                    </NumberInputStepper>
+                                </NumberInput>
+                                <Flex>
+                                    <Link to={`/product/${item.id}`}><small>View</small></Link>
+                                    <Text>&nbsp;/&nbsp;</Text>
+                                    <small onClick={() => removeItem(item.id)}>Remove</small>
+                                </Flex>
                             </Flex>
                         </Box>
                     </Box>
@@ -132,6 +143,7 @@ function CartItem({ item, removeItem }: ICartItem) {
                     base: "40%",
                     md: "initial"
                 }}
+                p="0"
             >
                 <Box>
                     <Text>$ {item.price}</Text>

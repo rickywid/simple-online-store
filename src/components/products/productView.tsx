@@ -23,6 +23,11 @@ const ProductView = ({ products, header }: IProps) => {
                     padding="15px 30px"
                     borderRadius="45px"
                     boxShadow="-8px 8px 0px -2px #cd9b97"
+                    width={{
+                        base: "100%",
+                        sm: "auto"
+                    }}
+                    textAlign="center"
                 >
                     {header}
                 </Heading>

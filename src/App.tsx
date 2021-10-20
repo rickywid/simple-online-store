@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAppSelector } from './app/hooks';
-import { Box, Container, Flex, Heading } from '@chakra-ui/react';
+import { Box, Container, Flex, Heading, Text } from '@chakra-ui/react';
 import { BsCart3 } from 'react-icons/bs';
 import routes from './routes';
 import { selectCart } from './components/cart/cartSlice';
@@ -15,6 +15,10 @@ function App() {
         bg="#FFFFFF"
         pt="5"
         pb="5"
+        position="sticky"
+        top="0"
+        zIndex="2"
+        borderBottom="15px solid #ffa1b2"
       >
         <Container maxW="container.xl">
           <Flex justify="space-between">
@@ -29,7 +33,7 @@ function App() {
                   style={{
                     display: 'inline-block',
                     fontSize: 25
-                  }} /> <span>{cart.length}</span>
+                  }} /> <Text display="inline-block" fontWeight="bold">{cart.length}</Text>
               </Box>
             </Link>
           </Flex>

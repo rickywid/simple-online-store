@@ -32,22 +32,22 @@ function Landing() {
                         <Box>
                             <Testimonials
                                 numStars={5}
-                                text="Better than my own food!"
+                                text="Tastes better than my own cooking!.."
                                 reviewer="Gordan Ramsay"
                             />
                         </Box>
                         <Box>
                             <Testimonials
                                 numStars={4}
-                                text="Delicious!..."
-                                reviewer="What's Cooking"
+                                text="Juicy and fresh that will stay in your memory forever!..."
+                                reviewer="Bobby Flay"
                             />
                         </Box>
                         <Box>
                             <Testimonials
                                 numStars={5}
-                                text="Pricey but worth every dollar!"
-                                reviewer="Gordan Ramsay"
+                                text="Pricey but worth every dollar!.."
+                                reviewer="Jamie Oliver"
                             />
                         </Box>
                     </Box>
@@ -109,22 +109,22 @@ function Landing() {
                         <Box>
                             <Testimonials
                                 numStars={4}
-                                text="Best Sandwiches in the world!"
-                                reviewer="Gordan Ramsay"
+                                text="Best sandwiches and burgers in the world!.."
+                                reviewer="Guy Fieri"
                             />
                         </Box>
                         <Box>
                             <Testimonials
                                 numStars={5}
-                                text="Best Sandwiches in the world!"
-                                reviewer="Gordan Ramsay"
+                                text=" The sandwiches are not only unique, but also very tasty!.."
+                                reviewer="Wolfgang Puck"
                             />
                         </Box>
                         <Box>
                             <Testimonials
                                 numStars={4}
-                                text="Best Sandwiches in the world!"
-                                reviewer="Gordan Ramsay"
+                                text="Always satisfies my hunger and my wallet!..."
+                                reviewer="Rachel Ray"
                             />
                         </Box>
                     </Box>
